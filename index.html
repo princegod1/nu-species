@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .info-container {
+      background-color: black;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: left;
+      text-align: center;
+    }
+	
+
+    .site-logo img {
+      width: 50px; /* Adjust the size as needed */
+      height: auto;
+      margin-left: 20px;
+    }
+	
+    
+   
+   .navbar {
+      background-color: black;
+      overflow: hidden;
+	  display: flex;
+	  justify-content: center;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+	  font-size: 17px;
+      margin-right: 60px; 
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+	  }
+	  
+	  
+	  .carousel-container {
+      display: flex;
+      align-items: center;
+      height: 50vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    }
+
+    .content {
+      align-items: left;
+      color: white;
+    }
+
+    .read-more {
+      position: absolute;
+      left: 15%;
+      bottom: 20%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navigation-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #333;
+      color: white;
+      font-size: 18px;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navigation-btn:hover {
+      background-color: #555;
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+	
+	
+	.info-container2 {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+	
+	
+
+    .info-container2 img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .read-more-btn2 {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+	  width: 20%;
+    }
+
+    .read-more-btn2:hover {
+      background-color: #555;
+    }
+	
+	  .info-text {
+      max-width: 60%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-text img {
+      max-width: 40%;
+      height: auto;
+    }
+	
+	
+	.admission-container {
+      text-align: center;
+      max-width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .transparent-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid #333;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .transparent-button:hover {
+      background-color: #333;
+      color: #fff;
+    }
+	
+	
+	
+	.social-icons-container {
+      text-align: center;
+      max-width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+      ion-icon {
+      font-size: 40px; /* Adjust the size as needed */
+      margin: 0 90px; /* Adjust the spacing as needed */
+      color: black; /* Adjust the color as needed */
+	   
+    }
+  
+  .copyright-container {
+      text-align: center;
+      color: #fff; /* Adjust the text color as needed */
+	   background-color: black;
+    }
+	
+	
+	
+	  /* Style for the navbar */
+        .navbar {
+            overflow: hidden;
+            background-color: black;
+			 display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style for the dropdown */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a, .dropdown-content a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+  </style>
+</head>
+<body>
+
+  <div class="info-container">
+    <div class="site-logo">
+	
+      <img width="50" height="50" src="images/l1.png" alt="Your School Logo" decoding="async" />
+	   <div class="vertical-line"></div>
+    </div>
+  </div>
+  
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="events.html">Events Gallery</a>
+    <!-- Newsletters dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn">Newsletters 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="easter_term.pdf">Easter Term</a>
+                <a href="christmas_term.pdf">Christmas Term</a>
+                <a href="summer_term.pdf">Summer Term</a>
+            </div>
+        </div>
+    <a href="contact.html">Contact Us</a>
+  </div>
+<div class="carousel-container">
+    <div class="carousel-item" style="background-image: url('images/a.jpg');">
+      <div class="content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('image2.jpg');">
+      <div class="content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="carousel-item" style="background-image: url('image3.jpg');">
+      <div class="content">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+
+    <div class="read-more" onclick="readMore()">Read More</div>
+
+    <button class="navigation-btn prev-btn" onclick="prevSlide()">❮</button>
+    <button class="navigation-btn next-btn" onclick="nextSlide()">❯</button>
+  </div>
+  
+   <div class="info-container2">
+   <div class="info-text">
+    <h2>Welcome to Nu Species Schools</h2>
+	
+    <p> is an all-age and co-educational school founded on sound Christian principles, proven godly values, and endowed with a rich and enhancing academic curriculum. Ours is an extraordinary and exceptional educational institute based on the vision of Believers’ LoveWorld Inc. and birthed by the inspiration from our Man of God Rev. Chris Oyakhilome Dsc., D.D.</p>
+	  <a href="#" class="read-more-btn2">Read More</a>
+</div>
+    <img src="images/pst1.jpg" alt="LoveWorld Schools Image" height="30%" width="30%">
+
+  
+  </div>
+  
+   <div class="admission-container">
+    <h2>Admission in Progress into Nursery & Primary</h2>
+    <p>DOWNLOAD NURSERY & PRIMARY ADMISSION FORM</p>
+    
+    <a href="#" class="transparent-button">Download Form</a>
+  </div>
+
+ <div class="social-icons-container">
+    <a href="https://twitter.com">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+    <a href="https://instagram.com">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <a href="https://google.com">
+      <ion-icon name="logo-google"></ion-icon>
+    </a>
+    <a href="https://facebook.com">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+  </div>
+  
+   <div class="copyright-container">
+    <p>Copyright © 2023 Nu Species School. All Rights Reserved</p>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+<script>
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const items = document.querySelectorAll('.carousel-item');
+      const totalItems = items.length;
+
+      if (index >= totalItems) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalItems - 1;
+      } else {
+        currentIndex = index;
+      }
+
+      const translateValue = -currentIndex * 100 + '%';
+      items.forEach(item => {
+        item.style.transform = 'translateX(' + translateValue + ')';
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function readMore() {
+      // Add logic to update content when "Read More" is clicked
+      alert("Read More Clicked. Add your logic here.");
+    }
+
+    // Initial show
+    showSlide(currentIndex);
+  </script>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
